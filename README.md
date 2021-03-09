@@ -59,7 +59,14 @@
   - startGame() 메서드를 private으로 설정하였을 때의 장점 및 게임 시작 방법
     - 우선 게임을 시작하기 위해선 init(생성자)에서 바로 startGame 메서드를 호출하는 방법이 있었다. 이렇게 해주면 startGame을 임의로 다시 호출하는 일을 방지할 수 있었다. instance를 생성하지 않고도 바로 게임을 시작할 수 있었기 때문에 코드가 더 간결해지기도 하였다.
     - 단점: init을 통해 자동으로 게임이 시작되므로 다른 사람이 내 코드를 유지보수 할 때 게임을 시작할 생각없이 미리 instance만 생성해두려는 의도로 코드를 짜게되면 생성자에 의해 startGame함수가 호출되어 문제가 발생할 우려가 있었다.
+
     - 결론 : RockPaperScissors 클래스는 instance를 만들어서 startGame을 private이 아닌 internal로 접근제어 지정자를 설정하여 startGame을 바로 호출하도록 했다. instance 생성만으로 게임이 시작되면 곤란한 부분이 많다는 판단하에서였다. 하지만 MukChiBa를 호출하는 부분에서는 instance생성 없이 바로 MukChiBa 게임으로 넘어가도록 해주었다. 이 이유는 게임의 구조상 가위바위보 게임 실행 후 바로 묵찌빠 게임으로 넘어가게 되는데 이 과정에서 묵찌빠 instance가 추가로 생성되어 묵찌빠 게임이 두번 실행되는 불상사를 막기 위함이다. 
+
+<img width="951" alt="notUseInstance" src="https://user-images.githubusercontent.com/67148595/110484577-1d995980-812e-11eb-8871-5122a8811bb0.png">
+
+<img width="947" alt="useInstance" src="https://user-images.githubusercontent.com/67148595/110484658-343fb080-812e-11eb-9cad-3371619cd18b.png">
+
+
 
 ## 이번 프로젝트를 통해 발전한 부분
 
