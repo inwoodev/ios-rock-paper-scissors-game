@@ -5,7 +5,11 @@
 - 열거형의  사용
 - 자연스러운 코드의 작성법 (모든 것을 장황하게 설명하지 않기)
 
+<br/>
 
+---
+
+<br/>
 
 ## Step 1. 가위바위보 클래스 설계
 
@@ -30,6 +34,12 @@
 - 제한된 선택지, 제한 선택지의 data만 들어있어야 하는 값의 모음에 enum을 활용함 
 - enum의 rawValue를 활용하여 불필요한 switch문을 줄임
 - nested enum을 사용하여 엉뚱하게 enum이 사용되는 일을 방지함
+
+<br/>
+
+---
+
+<br/>
 
 ## STep 2. 묵찌빠 클래스 설계
 
@@ -62,18 +72,25 @@
 
     - 결론 : RockPaperScissors 클래스는 instance를 만들어서 startGame을 private이 아닌 internal로 접근제어 지정자를 설정하여 startGame을 바로 호출하도록 했다. instance 생성만으로 게임이 시작되면 곤란한 부분이 많다는 판단하에서였다. 하지만 MukChiBa를 호출하는 부분에서는 instance 생성 시에 바로 MukChiBa의 메서드인 startGame()이 실행되도록 해주었다. 이 이유는 게임의 구조상 가위바위보 게임 실행 후 바로 묵찌빠 게임으로 넘어가게 되는데 이 과정에서 startGame을 다시 호출할 일이 없기 때문이다. instance의 이름도 필요하지 않았기에 와일드카드 ( "_" )를 사용하였다.
 
+<br/>
+
 > startGame의 접근제어 지정자를 private으로 설정한 묵찌빠 클래스의 인스턴스가 생성됨과 동시에 게임이 시작되는 코드
  
 
 <img width="951" alt="privateStartGame" src="https://user-images.githubusercontent.com/67148595/110485717-4837e200-812f-11eb-9fbb-15f7c95734c9.png">
 
+<br/>
 
 > startGame의 접근제어 지정자를 internal로 설정한 가위바위보 클래스의 인스턴스를 만들고 startGame을 호출하는 코드
 
 
 <img width="947" alt="internalStartGame" src="https://user-images.githubusercontent.com/67148595/110485729-4a9a3c00-812f-11eb-900d-ce6245d01726.png">
 
+<br/>
 
+---
+
+<br/>
 
 ## 이번 프로젝트를 통해 발전한 부분
 
