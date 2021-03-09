@@ -62,10 +62,10 @@
 
     - 결론 : RockPaperScissors 클래스는 instance를 만들어서 startGame을 private이 아닌 internal로 접근제어 지정자를 설정하여 startGame을 바로 호출하도록 했다. instance 생성만으로 게임이 시작되면 곤란한 부분이 많다는 판단하에서였다. 하지만 MukChiBa를 호출하는 부분에서는 instance생성 없이 바로 MukChiBa 게임으로 넘어가도록 해주었다. 이 이유는 게임의 구조상 가위바위보 게임 실행 후 바로 묵찌빠 게임으로 넘어가게 되는데 이 과정에서 묵찌빠 instance가 추가로 생성되어 묵찌빠 게임이 두번 실행되는 불상사를 막기 위함이다. 
 
-<img width="951" alt="notUseInstance" src="https://user-images.githubusercontent.com/67148595/110484577-1d995980-812e-11eb-8871-5122a8811bb0.png">
-
 <img width="947" alt="useInstance" src="https://user-images.githubusercontent.com/67148595/110484658-343fb080-812e-11eb-9cad-3371619cd18b.png">
 
+
+<img width="951" alt="notUseInstance" src="https://user-images.githubusercontent.com/67148595/110484577-1d995980-812e-11eb-8871-5122a8811bb0.png">
 
 
 ## 이번 프로젝트를 통해 발전한 부분
